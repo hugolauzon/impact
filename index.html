@@ -17,7 +17,6 @@
     <!-- The MIT License (MIT): Copyright (c) 2016 Cina Saffary - See full licence statement LICENCE file of this project -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.6/validator.min.js"></script>
 
-
     <!-- Mailchimp Popup -->
     <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
     <script type="text/javascript">
@@ -29,9 +28,8 @@
 		  		scrollingSpeed: 500
 	  		});
         $('#CTA1').click(function(){
-          require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"4aa7d5ad2d9444c953e4d0fa1","lid":"63f9a06be4"}) })
+          require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us14.list-manage.com","uuid":"4aa7d5ad2d9444c953e4d0fa1","lid":"63f9a06be4"}) });
           document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-
           // $.fn.fullpage.moveTo('secondPage', 0);
         });
 	  	});
