@@ -18,6 +18,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.6/validator.min.js"></script>
 
 
+    <!-- Mailchimp Popup -->
+    <script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
     <script type="text/javascript">
 		  $(document).ready(function() {
 		  	$('#fullpage').fullpage({
@@ -27,7 +29,10 @@
 		  		scrollingSpeed: 500
 	  		});
         $('#CTA1').click(function(){
-          $.fn.fullpage.moveTo('secondPage', 0);
+          require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"4aa7d5ad2d9444c953e4d0fa1","lid":"63f9a06be4"}) })
+          //document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+
+          // $.fn.fullpage.moveTo('secondPage', 0);
         });
 	  	});
 	  </script>
@@ -49,17 +54,19 @@
     <div class="section" id="section2">
       <div class="container">
         <h1>Inscrivez-vous dès maintenant!</h1>
-        <form class="form-horizontal" data-toggle="validator">
-          <div class="form-group">
+        <form class="form-horizontal" data-toggle="validator" role="form">
+          <div class="form-group has-feedback" data-focus="false">
             <label class="control-label col-sm-4" for="name">* Nom Complet :</label>
             <div class="col-sm-4">
-              <input type="password" class="form-control" id="name" placeholder="Entrez votre nom" required>
+              <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group has-feedback" data-focus="false">
             <label class="control-label col-sm-4" for="email">* Courriel :</label>
             <div class="col-sm-4">
               <input type="email" class="form-control" id="email" placeholder="Entrez l'adresse courriel" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
           </div>
           <!-- <div class="form-group"> -->
@@ -79,8 +86,8 @@
     <div class="section" id="section3">
       <div class="container">
         <h1>Petite démo</h1>
-        <form class="form-horizontal" data-toggle="validator">
-          <div class="form-group">
+        <form class="form-horizontal" data-toggle="validator" role="form">
+          <div class="form-group has-feedback" data-focus="false">
             <label class="control-label col-sm-4" for="postalcode">Code Postal :</label>
             <div class="col-sm-4">
               <input type="text" pattern="[A-Za-z][0-9][A-Za-z]\s?[0-9][A-Za-z][0-9]" class="form-control" id="postalcode" placeholder="H1H 1H1">
