@@ -1,0 +1,10 @@
+body {
+ /*margin: 0;*/
+ background-image: url('img\test-bg.jpeg');
+ /*background-size: 1920px 1080px;
+ background-repeat:no-repeat;*/
+}
+
+h1 {
+    text-align: center;
+}
