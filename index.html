@@ -11,7 +11,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.min.js"></script>
+
+    <!-- The MIT License (MIT): Copyright (c) 2016 Cina Saffary - See full licence statement LICENCE file of this project -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.6/validator.min.js"></script>
+
+
     <script type="text/javascript">
 		  $(document).ready(function() {
 		  	$('#fullpage').fullpage({
@@ -28,7 +33,7 @@
 </head>
 <body>
   <div id="fullpage">
-    <div class="section" id="section1">
+    <div class="section voffset6" id="section1">
       <div class="container">
 
         <h1 style="center-block">Projet Impact</h1>
@@ -44,10 +49,136 @@
         </div>
       </div>
     </div>
+
     <div class="section" id="section2">
-      <h1>Inscrivez-vous dès maintenant!</h1>
+      <div class="container">
+        <h1>Inscrivez-vous dès maintenant!</h1>
+        <form class="form-horizontal" data-toggle="validator">
+          <div class="form-group">
+            <label class="control-label col-sm-4" for="name">Nom Complet:</label>
+            <div class="col-sm-4">
+              <input type="password" class="form-control" id="name" placeholder="Entrez votre nom">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-4" for="email">Courriel:</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="email" placeholder="Entrez l'adresse courriel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-4" for="code_postal">Code Postal:</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="code_postal" placeholder="H1H 1H1">
+            </div>
+          </div>
+          <div class="form-group">
+            <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
+            <label class="control-label col-sm-4" for="arrondissement">Arrondissement:</label>
+            <div class="col-sm-4">
+              <select class="form-control" id="arrondissement">
+                <option>Ahuntsic-Cartierville</option>
+                <option>Anjou</option>
+                <option>Côte-des-Neiges–Notre-Dame-de-Grâce</option>
+                <option>Lachine</option>
+                <option>LaSalle</option>
+                <option>Le Plateau-Mont-Royal</option>
+                <option>Le Sud-Ouest</option>
+                <option>L’Île-Bizard–Sainte-Geneviève</option>
+                <option>Mercier–Hochelaga-Maisonneuve</option>
+                <option>Montréal-Nord</option>
+                <option>Outremont</option>
+                <option>Pierrefonds-Roxboro</option>
+                <option>Rivière-des-Prairies–Pointe-aux-Trembles</option>
+                <option>Rosemont–La Petite-Patrie</option>
+                <option>Saint-Laurent</option>
+                <option>Saint-Léonard</option>
+                <option>Verdun</option>
+                <option>Ville-Marie</option>
+                <option>Villeray–Saint-Michel–Parc-Extension</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-4">
+              <div class="checkbox">
+                <label><input type="checkbox"> Je veux recevoir les dernières nouvelles au sujet du projet Impact.</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <!-- <div class="center-block"> -->
+              <div class="col-sm-offset-4 col-sm-4">
+                <button type="submit" class="pull-xs-center btn btn-primary">Submit</button>
+              </div>
+            <!-- </div> -->
+          </div>
+        </form>
+      </div>
     </div>
 </div>
+
+
+<form data-toggle="validator" role="form">
+  <div class="form-group">
+    <label for="inputName" class="control-label">Name</label>
+    <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+  </div>
+  <div class="form-group has-feedback">
+    <label for="inputTwitter" class="control-label">Twitter</label>
+    <div class="input-group">
+      <span class="input-group-addon">@</span>
+      <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
+    </div>
+    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+    <div class="help-block with-errors">Hey look, this one has feedback icons!</div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail" class="control-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword" class="control-label">Password</label>
+    <div class="form-inline row">
+      <div class="form-group col-sm-6">
+        <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+        <div class="help-block">Minimum of 6 characters</div>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="radio">
+      <label>
+        <input type="radio" name="underwear" required>
+        Boxers
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="underwear" required>
+        Briefs
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+        Check yourself
+      </label>
+      <div class="help-block with-errors"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
 
 </body>
 </html>

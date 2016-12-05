@@ -9,24 +9,11 @@ h1 {
     text-align: center;
 }
 
-.section {
-  padding-top: 60px;
-}
-
 #section1 {
   background-image: url('../img/test-bg.jpeg');
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
-}
-#section1 h1 {
-  font-size: 60px;
-}
-
-#section1 p {
-  font-size: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 #section2 {
@@ -35,3 +22,96 @@ h1 {
   background-repeat:no-repeat;
   background-position: center;
 }
+
+@media (max-width: 767px) {
+  .pull-xs-center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+  }
+  #section1 h1 {
+    font-size: 60px;
+  }
+  #section1 p {
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #CTA1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 991px) {}
+@media (min-width: 992px) {}
+
+@media (max-width: 1199px) {}
+@media (min-width: 1200px) {}
+
+  /*
+  @media (max-width: $screen-xs-max) {
+      .pull-xs-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-xs-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-xs-right {
+          float: right;
+          text-align: right;
+      }
+
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      .pull-sm-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-sm-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-sm-right {
+          float: right;
+          text-align: right;
+      }
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      .pull-md-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-md-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-md-right {
+          float: right;
+          text-align: right;
+      }
+  }
+
+  @media (min-width: $screen-lg-min) {
+      .pull-lg-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-lg-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-lg-right {
+          float: right;
+          text-align: right;
+      }
+  }
+  */
