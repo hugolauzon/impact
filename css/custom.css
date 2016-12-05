@@ -1,4 +1,7 @@
+
+
 body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
  /*margin: 0;
  background-image: url('../img/test-bg.jpeg');
  background-size: 1920px 1080px;
@@ -17,17 +20,19 @@ h1 {
 }
 
 #section2 {
-  background-image: url('../img/test-bg2.jpeg');
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center;
+  background: #BA8B02; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #181818, #BA8B02); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #181818, #BA8B02); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #181818, #BA8B02); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #181818, #BA8B02); /* Standard syntax */
+  color: white;
 }
 
 @media (max-width: 767px) {
   .pull-xs-center {
     display: block;
     margin-right: auto;
-    /*margin-left: auto;*/
+    margin-left: auto;
   }
 }
 @media (min-width: 768px) {

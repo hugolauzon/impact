@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.min.css"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.css"></script>
     <link rel="stylesheet" type="text/css" href="css/custom.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/vendors/scrolloverflow.js"></script>
 
     <!-- The MIT License (MIT): Copyright (c) 2016 Cina Saffary - See full licence statement LICENCE file of this project -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.6/validator.min.js"></script>
@@ -37,11 +38,7 @@
       <div class="container">
 
         <h1 style="center-block">Projet Impact</h1>
-
-        <!-- <h2>Mission</h2> -->
         <p>Notre mission est de créer un monde meilleur.</p>
-
-        <!-- <h2>Vision</h2> -->
         <p>Nous voyons ce projet croître durant les 5 prochaines années pour devenir pan-canadien!</p>
         <p>Voulez-vous y participer??</p>
         <div class="text-center">
@@ -49,34 +46,52 @@
         </div>
       </div>
     </div>
-
     <div class="section" id="section2">
       <div class="container">
         <h1>Inscrivez-vous dès maintenant!</h1>
         <form class="form-horizontal" data-toggle="validator">
           <div class="form-group">
-            <label class="control-label col-sm-4" for="name">Nom Complet:</label>
+            <label class="control-label col-sm-4" for="name">* Nom Complet :</label>
             <div class="col-sm-4">
-              <input type="password" class="form-control" id="name" placeholder="Entrez votre nom">
+              <input type="password" class="form-control" id="name" placeholder="Entrez votre nom" required>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-4" for="email">Courriel:</label>
+            <label class="control-label col-sm-4" for="email">* Courriel :</label>
             <div class="col-sm-4">
-              <input type="email" class="form-control" id="email" placeholder="Entrez l'adresse courriel">
+              <input type="email" class="form-control" id="email" placeholder="Entrez l'adresse courriel" required>
             </div>
           </div>
+          <!-- <div class="form-group"> -->
+            <div class="col-sm-offset-4 col-sm-4">
+              <p>En fournissant mon adresse courriel et en cliquant sur "Soumettre", j'accepte de recevoir des nouvelles de ce projet par courriel.
+                (Un courriel de validation sera envoyé afin de confirmer l'adresse.)</p>
+            </div>
+          <!-- </div> -->
           <div class="form-group">
-            <label class="control-label col-sm-4" for="code_postal">Code Postal:</label>
+            <div class="col-sm-offset-4 col-sm-4">
+              <button type="submit" class="pull-xs-center btn btn-primary">Soumettre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="section" id="section3">
+      <div class="container">
+        <h1>Petite démo</h1>
+        <form class="form-horizontal" data-toggle="validator">
+          <div class="form-group">
+            <label class="control-label col-sm-4" for="postalcode">Code Postal :</label>
             <div class="col-sm-4">
-              <input type="email" class="form-control" id="code_postal" placeholder="H1H 1H1">
+              <input type="text" pattern="[A-Za-z][0-9][A-Za-z]\s?[0-9][A-Za-z][0-9]" class="form-control" id="postalcode" placeholder="H1H 1H1">
             </div>
           </div>
           <div class="form-group">
             <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
-            <label class="control-label col-sm-4" for="arrondissement">Arrondissement:</label>
+            <label class="control-label col-sm-4" for="arrondissement">Arrondissement :</label>
             <div class="col-sm-4">
               <select class="form-control" id="arrondissement">
+                <option>-</option>
                 <option>Ahuntsic-Cartierville</option>
                 <option>Anjou</option>
                 <option>Côte-des-Neiges–Notre-Dame-de-Grâce</option>
@@ -100,16 +115,9 @@
             </div>
           </div>
           <div class="form-group">
-            <div class="col-sm-offset-4 col-sm-4">
-              <div class="checkbox">
-                <label><input type="checkbox"> Je veux recevoir les dernières nouvelles au sujet du projet Impact.</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
             <!-- <div class="center-block"> -->
               <div class="col-sm-offset-4 col-sm-4">
-                <button type="submit" class="pull-xs-center btn btn-primary">Submit</button>
+                <button type="submit" class="pull-xs-center btn btn-primary">Voir la démo</button>
               </div>
             <!-- </div> -->
           </div>
@@ -117,68 +125,5 @@
       </div>
     </div>
 </div>
-
-
-<form data-toggle="validator" role="form">
-  <div class="form-group">
-    <label for="inputName" class="control-label">Name</label>
-    <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
-  </div>
-  <div class="form-group has-feedback">
-    <label for="inputTwitter" class="control-label">Twitter</label>
-    <div class="input-group">
-      <span class="input-group-addon">@</span>
-      <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
-    </div>
-    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-    <div class="help-block with-errors">Hey look, this one has feedback icons!</div>
-  </div>
-  <div class="form-group">
-    <label for="inputEmail" class="control-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
-    <div class="help-block with-errors"></div>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword" class="control-label">Password</label>
-    <div class="form-inline row">
-      <div class="form-group col-sm-6">
-        <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
-        <div class="help-block">Minimum of 6 characters</div>
-      </div>
-      <div class="form-group col-sm-6">
-        <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
-        <div class="help-block with-errors"></div>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="radio">
-      <label>
-        <input type="radio" name="underwear" required>
-        Boxers
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="underwear" required>
-        Briefs
-      </label>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
-        Check yourself
-      </label>
-      <div class="help-block with-errors"></div>
-    </div>
-  </div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
-
-
 </body>
 </html>
