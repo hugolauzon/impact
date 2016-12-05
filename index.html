@@ -19,7 +19,7 @@
 
 
     <!-- Mailchimp Popup -->
-    <script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
     <script type="text/javascript">
 		  $(document).ready(function() {
 		  	$('#fullpage').fullpage({
@@ -30,7 +30,7 @@
 	  		});
         $('#CTA1').click(function(){
           require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"4aa7d5ad2d9444c953e4d0fa1","lid":"63f9a06be4"}) })
-          //document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+          document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
 
           // $.fn.fullpage.moveTo('secondPage', 0);
         });
