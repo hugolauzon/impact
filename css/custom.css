@@ -9,16 +9,29 @@ h1 {
     text-align: center;
 }
 
+.section {
+  padding-top: 60px;
+}
+
 #section1 {
   background-image: url('../img/test-bg.jpeg');
-  background-size: 1920px 1080px;
+  background-size: cover;
   background-repeat:no-repeat;
-  background-position: center; 
+  background-position: center;
+}
+#section1 h1 {
+  font-size: 60px;
+}
+
+#section1 p {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #section2 {
   background-image: url('../img/test-bg2.jpeg');
-  background-size: 1920px 1080px;
+  background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
 }
