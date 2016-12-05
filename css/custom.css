@@ -27,7 +27,7 @@ h1 {
   .pull-xs-center {
     display: block;
     margin-right: auto;
-    margin-left: auto;
+    /*margin-left: auto;*/
   }
 }
 @media (min-width: 768px) {
