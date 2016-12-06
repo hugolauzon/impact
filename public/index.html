@@ -48,7 +48,7 @@
         $('.mailchimpform').submit(function(e) {
           var $this = $(this);
           $.ajax({
-              type: "GET", // GET & url for json slightly different
+              type: "POST", // GET & url for json slightly different
               url: "http://facebook.us14.list-manage.com/subscribe/post-json?c=?",
               data: $this.serialize(),
               dataType    : 'json',
