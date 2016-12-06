@@ -34,6 +34,11 @@
           $.fn.fullpage.moveSectionDown();
         });
         $('#successSignUp').click(function(){
+          $("#successModal").modal("hide");
+          $.fn.fullpage.moveSectionDown();
+        });
+        $('#errorSignUp').click(function(){
+          $("#errorModal").modal("hide");
           $.fn.fullpage.moveSectionDown();
         });
         $('#CTA3').click(function(){
@@ -198,7 +203,7 @@
             <p id="m1text">Vous allez maintenant recevoir un courriel pour valider l'adresse. Une fois que vous aurez vérifié votre adresse, vous serez ajouté à notre liste pour la diffusion des nouvelles sur le projet Impact.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal" id="successSignUp">Parfait, je vais valider mon adresse courriel!</button>
+            <button type="button" class="btn btn-success" id="successSignUp">Parfait, je vais valider mon adresse courriel!</button>
           </div>
         </div>
       </div>
@@ -217,7 +222,7 @@
             <p id="m1text">Le formulaire a mal été rempli ou le serveur n'est pas accessible. Veuillez vérifier les informations entrées et réessayer.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal" id="errorSignUp">OK</button>
+            <button type="button" class="btn btn-danger" id="errorSignUp">OK</button>
           </div>
         </div>
       </div>
