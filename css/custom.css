@@ -19,13 +19,35 @@ h1 {
   background-position: center;
 }
 
+#section1 .fp-tableCell {
+    vertical-align: top;
+}
+
 #section2 {
-  background: #BA8B02; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #181818, #BA8B02); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #181818, #BA8B02); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #181818, #BA8B02); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #181818, #BA8B02); /* Standard syntax */
-  color: white;
+  background-image: url('../img/test-bg3.jpeg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  /*background: #BA8B02; /* For browsers that do not support gradients
+  background: -webkit-linear-gradient(left, #181818, #BA8B02); /* For Safari 5.1 to 6.0
+  background: -o-linear-gradient(right, #181818, #BA8B02); /* For Opera 11.1 to 12.0
+  background: -moz-linear-gradient(right, #181818, #BA8B02); /* For Firefox 3.6 to 15
+  background: linear-gradient(to right, #181818, #BA8B02); /* Standard syntax
+  color: white;*/
+}
+
+#section2 .fp-tableCell {
+    vertical-align: top;
+}
+
+#slide1 {
+  background: #42a4f4;
+}
+#slide2 {
+  background: #42f495;
+}
+#slide3 {
+  background: #6A7F71;
 }
 
 .has-error .control-label {
@@ -36,6 +58,9 @@ h1 {
   color: white;
 }
 
+.slide {
+  width: auto
+}
 @media (max-width: 767px) {
   .pull-xs-center {
     display: block;
@@ -44,7 +69,7 @@ h1 {
   }
 }
 @media (min-width: 768px) {
-  .section {
+  #section1 {
     padding-top: 60px;
   }
   #section1 h1 {
@@ -55,8 +80,8 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  #mc-embedded-subscribe {
-    font-size: 28px;
+  #section2 {
+    padding-top: 100px;
   }
 }
 
