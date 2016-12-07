@@ -1,0 +1,142 @@
+
+
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+h1 {
+    text-align: center;
+}
+
+#section1 {
+  background-image: url('../img/test-bg.jpeg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+
+#section1 .fp-tableCell {
+    vertical-align: top;
+}
+
+#section2 {
+  background-image: url('../img/test-bg3.jpeg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+
+#section2 .fp-tableCell {
+    vertical-align: top;
+}
+
+#slide1 {
+  background: #42a4f4;
+}
+#slide2 {
+  background: #42f495;
+}
+#slide3 {
+  background: #6A7F71;
+}
+
+.has-error .control-label {
+  color: white;
+}
+
+.has-success .control-label {
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .pull-xs-center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 768px) {
+  #section1 .container {
+    padding-top: 60px;
+  }
+  #section1 h1 {
+    font-size: 60px;
+  }
+  #section1 p {
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #section2 .container {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 991px) {}
+@media (min-width: 992px) {}
+
+@media (max-width: 1199px) {}
+@media (min-width: 1200px) {}
+
+  /*
+  @media (max-width: $screen-xs-max) {
+      .pull-xs-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-xs-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-xs-right {
+          float: right;
+          text-align: right;
+      }
+
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      .pull-sm-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-sm-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-sm-right {
+          float: right;
+          text-align: right;
+      }
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      .pull-md-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-md-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-md-right {
+          float: right;
+          text-align: right;
+      }
+  }
+
+  @media (min-width: $screen-lg-min) {
+      .pull-lg-left {
+          float: left;
+          text-align: left;
+      }
+      .pull-lg-center {
+          float: center;
+          text-align: center;
+      }
+      .pull-lg-right {
+          float: right;
+          text-align: right;
+      }
+  }
+  */
