@@ -40,14 +40,20 @@
         });
         $('#errorSignUp').click(function(){
           $("#errorModal").modal("hide");
-          // $.fn.fullpage.moveSectionDown();
+          $.fn.fullpage.moveSectionDown();
         });
-
         var arrondissement;
         $('#CTA3').click(function(){
           arrondissement = $("#arrondissement").val();
-          $("#arrond-display1").html("Votre arrondissement: <b>" + arrondissement + "</b>");
+          $("#arrond-display1").text(arrondissement);
           $.fn.fullpage.moveSlideRight();
+        });
+        $('#btnDemoNext').click(function(){
+          $("#arrond-display2").text("Actualité à " + arrondissement);
+          $.fn.fullpage.moveSlideRight();
+        });
+        $('#btnDemoReturnFirst').click(function(){
+          $.fn.fullpage.silentMoveTo('firstPage', 0);
         });
 
         $('.mailchimpform').submit(function(e) {
@@ -189,14 +195,33 @@
             <div class="col-sm-offset-2 col-sm-8">
               <br>
               <br>
-              <h4>Votre ville: <b>Montréal</b></h4>
-              <h4 id="arrond-display1">-</h4>
+              <p><b>Votre ville: </b></p>
+              <div class="well">Montréal</div>
+              <p><b>Votre arrondissement: </b></p>
+              <div class="well" id="arrond-display1">-</div>
+              <br>
+              <button type="button" class="btn btn-lg btn-danger center-block" name="demoNext" id="btnDemoNext">Suivant</button>
             </div>
           </div>
         </div>
         <div class="slide" id="slide3">
-          <div class="container">
-            <h1>Slide 3</h1>
+          <div class="container-fluid">
+            <h1 class="hidden-xs">Impact</h1>
+            <div class="row header-row">
+              <h3>Montréal</h3>
+            </div>
+            <div class="row">
+              <button type="button" name="button" class="btn btn-lg btn-primary btn-block"><span class="glyphicon glyphicon-leaf"></span> Projet de règlement #1</button>
+            </div>
+            <div class="row header-row" style="margin-top: 80px">
+              <h3 id="arrond-display2">-</h3>
+            </div>
+            <div class="row">
+              <button type="button" name="button" class="btn btn-lg btn-primary btn-block"><span class="glyphicon glyphicon-road"></span> Projet de piste cyclable</button>
+            </div>
+            <div class="col-sm-offset-2 col-sm-8">
+              <button type="button" name="button" id="btnDemoReturnFirst" class="btn btn-sm btn-link center-block" style="position: fixed; bottom: 20px;">Retour au site web</button>
+            </div>
           </div>
         </div>
       </div>
