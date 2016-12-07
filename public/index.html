@@ -42,7 +42,11 @@
           $("#errorModal").modal("hide");
           // $.fn.fullpage.moveSectionDown();
         });
+
+        var arrondissement;
         $('#CTA3').click(function(){
+          arrondissement = $("#arrondissement").val();
+          $("#arrond-display1").html("Votre arrondissement: <b>" + arrondissement + "</b>");
           $.fn.fullpage.moveSlideRight();
         });
 
@@ -180,7 +184,14 @@
         </div>
         <div class="slide" id="slide2">
           <div class="container">
-            <h1>Slide 2</h1>
+            <h1>Bienvenu dans Impact</h1>
+            <p style="text-align:center">(démo)</p>
+            <div class="col-sm-offset-2 col-sm-8">
+              <br>
+              <br>
+              <h4>Votre ville: <b>Montréal</b></h4>
+              <h4 id="arrond-display1">-</h4>
+            </div>
           </div>
         </div>
         <div class="slide" id="slide3">

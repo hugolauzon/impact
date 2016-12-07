@@ -34,7 +34,10 @@ h1 {
   background: #42a4f4;
 }
 #slide2 {
-  background: #42f495;
+  background-image: url('../img/test-bg4.jpeg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
 }
 #slide3 {
   background: #6A7F71;
