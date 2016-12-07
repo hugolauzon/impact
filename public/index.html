@@ -31,28 +31,6 @@
           controlArrows: false
 	  		});
 
-        var $objHead = $( 'head' );
-
-        // define a function to disable zooming
-        var zoomDisable = function() {
-            $objHead.find( 'meta[name=viewport]' ).remove();
-            $objHead.prepend( '<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />' );
-        };
-
-        // ... and another to re-enable it
-        var zoomEnable = function() {
-            $objHead.find( 'meta[name=viewport]' ).remove();
-            $objHead.prepend( '<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" />');
-        };
-
-        // if the device is an iProduct, apply the fix whenever the users touches an input
-        if( navigator.userAgent.length && /iPhone|iPad|iPod/i.test( navigator.userAgent ) ) {
-            // define as many target fields as your like
-            $( ".input" )
-                .on( { 'touchstart' : function() { zoomDisable() } } )
-                .on( { 'touchend' : function() { setTimeout( zoomEnable , 500 ) } } );
-         }
-
         $('#CTA1').click(function(){
           $.fn.fullpage.moveSectionDown();
         });
@@ -114,20 +92,20 @@
                 <input type="hidden" name="u" value="4aa7d5ad2d9444c953e4d0fa1">
                 <input type="hidden" name="id" value="63f9a06be4">
                 <div id="mc_embed_signup_scroll">
-                  <div class="mc-field-group form-group">
+                  <div class="mc-field-group form-group form-group-lg">
                   	<label class="control-label col-sm-3" for="mce-EMAIL">Adresse Courriel <span class="asterisk">*</span>
                     </label>
                     <div class="col-sm-6">
                       <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Courriel" required>
                     </div>
                   </div>
-                  <div class="mc-field-group form-group">
+                  <div class="mc-field-group form-group form-group-lg">
                   	<label class="control-label col-sm-3" for="mce-FNAME">Prénom </label>
                     <div class="col-sm-6">
                   	  <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Prénom">
                     </div>
                   </div>
-                  <div class="mc-field-group form-group">
+                  <div class="mc-field-group form-group form-group-lg">
                   	<label class="control-label col-sm-3" for="mce-LNAME">Nom </label>
                     <div class="col-sm-6">
                     	<input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME" placeholder="Nom">
@@ -155,14 +133,14 @@
           <div class="container">
             <h1>Petite démo</h1>
             <form class="form-horizontal" data-toggle="validator" role="form">
-              <div class="form-group has-feedback" data-focus="false">
+              <div class="form-group form-group-lg has-feedback" data-focus="false">
                 <label class="control-label col-sm-4" for="postalcode">Code Postal :</label>
                 <div class="col-sm-4">
                   <input type="text" pattern="[A-Za-z][0-9][A-Za-z]\s?[0-9][A-Za-z][0-9]" class="form-control" id="postalcode" placeholder="H1H 1H1">
                 </div>
               </div>
               <p style="text-align: center;"><b><i>ou</i></b></p>
-              <div class="form-group">
+              <div class="form-group form-group-lg">
                 <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
                 <label class="control-label col-sm-4" for="arrondissement">Arrondissement :</label>
                 <div class="col-sm-4">
