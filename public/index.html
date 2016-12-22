@@ -42,6 +42,8 @@
         });
         $('#errorSignUp').click(function(){
           $("#errorModal").modal("hide");
+        });
+        $('#CTA2').click(function(){
           $.fn.fullpage.moveSectionDown();
         });
         $('#btnDemoNext').click(function(){
@@ -130,7 +132,7 @@
                   </div>
                 </div>
               </form>
-              <button type="button" class="btn btn-lg btn-danger" id="CTA3">Voir la démo</button>
+              <button type="button" class="btn btn-lg btn-danger" id="CTA2">Voir la démo</button>
           </div>
           <!--End mc_embed_signup-->
         </div>
@@ -144,8 +146,8 @@
               <form class="form-horizontal" data-toggle="validator" role="form">
                 <div class="form-group form-group-lg">
                   <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
-                  <label class="control-label col-sm-4" for="arrondissement">Ma ville :</label>
-                  <div class="col-sm-4">
+                  <label class="control-label col-sm-8" for="arrondissement">Ma ville :</label>
+                  <div class="col-sm-8">
                     <select class="form-control" id="arrondissement">
                       <option>Montréal</option>
                     </select>
@@ -153,8 +155,8 @@
                 </div>
                 <div class="form-group form-group-lg">
                   <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
-                  <label class="control-label col-sm-4" for="arrondissement">Mon arrondissement :</label>
-                  <div class="col-sm-4">
+                  <label class="control-label col-sm-8" for="arrondissement">Mon arrondissement :</label>
+                  <div class="col-sm-8">
                     <select class="form-control" id="arrondissement">
                       <option>-</option>
                       <option>Ahuntsic-Cartierville</option>
@@ -186,11 +188,6 @@
                   <!-- </div> -->
                 </div>
               </form>
-              <p><b>Votre arrondissement: </b></p>
-              <div class="well" id="arrond-display1">-</div>
-              <br>
-              <button type="button" class="btn btn-lg btn-danger center-block" name="demoNext" id="btnDemoNext">Suivant</button>
-            </div>
           </div>
         </div>
         <div class="slide" id="slide2">
