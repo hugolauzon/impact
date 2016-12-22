@@ -16,6 +16,7 @@
     <script src="jquery.fullPage.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/vendors/scrolloverflow.min.js"></script> -->
     <script src="vendors/scrolloverflow.min.js"></script>
+    <script src="vendors/jquery.easings.min.js"></script>
 
     <!-- The MIT License (MIT): Copyright (c) 2016 Cina Saffary - See full licence statement LICENCE file of this project -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.6/validator.min.js"></script>
@@ -28,7 +29,8 @@
 		  		anchors: ['firstPage', 'secondPage', 'thirdPage'],
 		  		menu: '#menu',
 		  		scrollingSpeed: 500,
-          controlArrows: false
+          controlArrows: false,
+          recordHistory: false;
 	  		});
         //disabling scrolling
         $.fn.fullpage.setAllowScrolling(false);
@@ -101,20 +103,20 @@
                 <input type="hidden" name="id" value="63f9a06be4">
                 <div id="mc_embed_signup_scroll">
                   <div class="mc-field-group form-group form-group-lg">
-                  	<label class="control-label col-sm-3" for="mce-EMAIL">Adresse Courriel <span class="asterisk">*</span>
+                  	<!-- <label class="control-label col-sm-3" for="mce-EMAIL">Adresse Courriel <span class="asterisk">*</span> -->
                     </label>
                     <div class="col-sm-6">
                       <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Courriel" required>
                     </div>
                   </div>
                   <div class="mc-field-group form-group form-group-lg">
-                  	<label class="control-label col-sm-3" for="mce-FNAME">Prénom </label>
+                  	<!-- <label class="control-label col-sm-3" for="mce-FNAME">Prénom </label> -->
                     <div class="col-sm-6">
                   	  <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Prénom">
                     </div>
                   </div>
                   <div class="mc-field-group form-group form-group-lg">
-                  	<label class="control-label col-sm-3" for="mce-LNAME">Nom </label>
+                  	<!-- <label class="control-label col-sm-3" for="mce-LNAME">Nom </label> -->
                     <div class="col-sm-6">
                     	<input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME" placeholder="Nom">
                     </div>
@@ -132,7 +134,9 @@
                   </div>
                 </div>
               </form>
-              <button type="button" class="btn btn-lg btn-danger" id="CTA2">Voir la démo</button>
+              <div class="col-sm-12">
+                <button type="button" class="btn btn-lg btn-warning center-block" id="CTA2">Voir la démo</button>
+              </div>
           </div>
           <!--End mc_embed_signup-->
         </div>
