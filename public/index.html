@@ -44,12 +44,6 @@
           $("#errorModal").modal("hide");
           $.fn.fullpage.moveSectionDown();
         });
-        var arrondissement;
-        $('#CTA3').click(function(){
-          arrondissement = $("#arrondissement").val();
-          $("#arrond-display1").text(arrondissement);
-          $.fn.fullpage.silentMoveTo('thirdPage', 1);
-        });
         $('#btnDemoNext').click(function(){
           $("#arrond-display2").text(arrondissement);
           $.fn.fullpage.moveSlideRight();
@@ -136,6 +130,7 @@
                   </div>
                 </div>
               </form>
+              <button type="button" class="btn btn-lg btn-danger" id="CTA3">Voir la démo</button>
           </div>
           <!--End mc_embed_signup-->
         </div>
@@ -143,62 +138,54 @@
       <div class="section" id="section3">
         <div class="slide" id="slide1">
           <div class="container">
-            <h1>Petite démo</h1>
-            <form class="form-horizontal" data-toggle="validator" role="form">
-              <div class="form-group form-group-lg has-feedback" data-focus="false">
-                <label class="control-label col-sm-4" for="postalcode">Code Postal :</label>
-                <div class="col-sm-4">
-                  <input type="text" pattern="[A-Za-z][0-9][A-Za-z]\s?[0-9][A-Za-z][0-9]" class="form-control" id="postalcode" placeholder="H1H 1H1">
-                </div>
-              </div>
-              <p style="text-align: center;"><b><i>ou</i></b></p>
-              <div class="form-group form-group-lg">
-                <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
-                <label class="control-label col-sm-4" for="arrondissement">Arrondissement :</label>
-                <div class="col-sm-4">
-                  <select class="form-control" id="arrondissement">
-                    <option>-</option>
-                    <option>Ahuntsic-Cartierville</option>
-                    <option>Anjou</option>
-                    <option>Côte-des-Neiges–Notre-Dame-de-Grâce</option>
-                    <option>Lachine</option>
-                    <option>LaSalle</option>
-                    <option>Le Plateau-Mont-Royal</option>
-                    <option>Le Sud-Ouest</option>
-                    <option>L’Île-Bizard–Sainte-Geneviève</option>
-                    <option>Mercier–Hochelaga-Maisonneuve</option>
-                    <option>Montréal-Nord</option>
-                    <option>Outremont</option>
-                    <option>Pierrefonds-Roxboro</option>
-                    <option>Rivière-des-Prairies–Pointe-aux-Trembles</option>
-                    <option>Rosemont–La Petite-Patrie</option>
-                    <option>Saint-Laurent</option>
-                    <option>Saint-Léonard</option>
-                    <option>Verdun</option>
-                    <option>Ville-Marie</option>
-                    <option>Villeray–Saint-Michel–Parc-Extension</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <!-- <div class="center-block"> -->
-                  <div class="col-sm-offset-4 col-sm-4">
-                    <button type="submit" class="center-block btn btn-lg btn-danger" id="CTA3">Continuer</button>
-                  </div>
-                <!-- </div> -->
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="slide" id="slide2">
-          <div class="container">
             <h1>Bienvenu dans Impact</h1>
             <p style="text-align:center">(démo)</p>
             <div class="col-sm-offset-2 col-sm-8">
-              <br>
-              <br>
-              <p><b>Votre ville: </b></p>
-              <div class="well">Montréal</div>
+              <form class="form-horizontal" data-toggle="validator" role="form">
+                <div class="form-group form-group-lg">
+                  <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
+                  <label class="control-label col-sm-4" for="arrondissement">Ma ville :</label>
+                  <div class="col-sm-4">
+                    <select class="form-control" id="arrondissement">
+                      <option>Montréal</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group form-group-lg">
+                  <!-- <label class="control-label col-sm-2" for="arrondissement">Arrondissement:</label> -->
+                  <label class="control-label col-sm-4" for="arrondissement">Mon arrondissement :</label>
+                  <div class="col-sm-4">
+                    <select class="form-control" id="arrondissement">
+                      <option>-</option>
+                      <option>Ahuntsic-Cartierville</option>
+                      <option>Anjou</option>
+                      <option>Côte-des-Neiges–Notre-Dame-de-Grâce</option>
+                      <option>Lachine</option>
+                      <option>LaSalle</option>
+                      <option>Le Plateau-Mont-Royal</option>
+                      <option>Le Sud-Ouest</option>
+                      <option>L’Île-Bizard–Sainte-Geneviève</option>
+                      <option>Mercier–Hochelaga-Maisonneuve</option>
+                      <option>Montréal-Nord</option>
+                      <option>Outremont</option>
+                      <option>Pierrefonds-Roxboro</option>
+                      <option>Rivière-des-Prairies–Pointe-aux-Trembles</option>
+                      <option>Rosemont–La Petite-Patrie</option>
+                      <option>Saint-Laurent</option>
+                      <option>Saint-Léonard</option>
+                      <option>Verdun</option>
+                      <option>Ville-Marie</option>
+                      <option>Villeray–Saint-Michel–Parc-Extension</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <!-- <div class="center-block"> -->
+                <!-- <div class="col-sm-offset-4 col-sm-4"> -->
+                      <button type="submit" class="btn btn-lg btn-danger center-block" name="demoNext" id="btnDemoNext">Suivant</button>                    </div>
+                  <!-- </div> -->
+                </div>
+              </form>
               <p><b>Votre arrondissement: </b></p>
               <div class="well" id="arrond-display1">-</div>
               <br>
@@ -206,7 +193,7 @@
             </div>
           </div>
         </div>
-        <div class="slide" id="slide3">
+        <div class="slide" id="slide2">
           <div class="container-fluid">
             <h1 class="hidden-xs">Impact</h1>
             <div class="row header-row col-sm-offset-3 col-sm-6">

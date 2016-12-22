@@ -31,37 +31,34 @@ h1 {
 }
 
 #slide1 {
-  background: #42a4f4;
-}
-#slide2 {
   background-image: url('../img/test-bg4_op50.jpeg');
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
 }
 
-#slide2 .fp-tableCell {
+#slide1 .fp-tableCell {
     vertical-align: top;
 }
 
-#slide3 {
+#slide2 {
   background: rgb(239, 239, 244);
 }
 
-#slide3 .header-row {
+#slide2 .header-row {
   background: rgb(239, 239, 244);
 }
 
-#slide3 h4 {
+#slide2 h4 {
   text-align: center;
 }
 
-#slide3 li {
+#slide2 li {
   padding: 0px;
   border: 0px;
 }
 
-#slide3 .btn-md {
+#slide2 .btn-md {
   border-color: rgb(240, 240, 240);
   border-radius: 0;
   border-left-width: 0px;
@@ -70,11 +67,11 @@ h1 {
   text-align: left;
 }
 
-#slide3 .list-group {
+#slide2 .list-group {
   overflow-y: auto;
 }
 
-#slide3 .fp-tableCell {
+#slide2 .fp-tableCell {
     vertical-align: top;
 }
 
@@ -109,10 +106,10 @@ h1 {
     padding-top: 100px;
   }
 
-  #slide2 h1 {
+  #slide1 h1 {
     font-size: 60px;
   }
-  #slide2 p {
+  #slide1 p {
     font-size: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
