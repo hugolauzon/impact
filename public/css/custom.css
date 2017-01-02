@@ -73,6 +73,21 @@ h1 {
   height: 44px;
 }
 
+
+#slide2 .btn:focus, #slide2 .btn:active:focus, #slide2 .btn.active:focus {
+    outline: 0 none;
+}
+
+#slide2 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    background: #ceced2;
+}
+
+#slide2 .btn-default:active, .btn-default.active {
+    background: #EFEFF4;
+    box-shadow: none;
+}
+
+
 #slide2 .list-group {
   overflow-y: auto;
 }
